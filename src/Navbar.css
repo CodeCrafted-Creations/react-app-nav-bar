@@ -1,0 +1,111 @@
+/* General Navbar Styling */
+.custom-navbar {
+  background-color: #fff;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow:  5px 10px 10px rgb(255, 0, 0);
+  margin: auto;
+  max-width: 1270px;
+  margin-top: 50px;
+  padding: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Center the container within the navbar */
+.custom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.custom-navbar-brand .custom-logo {
+  width: 100px;
+}
+
+/* Navbar links styling */
+.custom-navbar-nav {
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0; /* Pushes menu items to the right */
+}
+
+.custom-nav-item {
+  margin-left: 1rem;
+}
+
+.custom-nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.custom-nav-link:hover {
+  color: #ff0000;
+}
+
+/* Toggle button styling */
+.custom-navbar-toggler {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+  .custom-navbar-toggler {
+    display: block; /* Show on smaller screens */
+  }
+
+  .custom-navbar-collapse {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: #373936; /* Change this background color as needed */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 1rem 0;
+  }
+
+  .custom-navbar-collapse.show {
+    display: flex; /* Show when toggled */
+  }
+
+  .custom-navbar-nav {
+    flex-direction: column;
+  }
+
+  .custom-nav-item {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    border-bottom: 0.5px solid #ffffff; /* White divider between items */
+  }
+
+  .custom-nav-item:last-child {
+    border-bottom: none; /* No divider after last item */
+  }
+
+  .custom-nav-link {
+    color: #ffffff; /* White text color */
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
